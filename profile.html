@@ -42,6 +42,7 @@
 
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"crossorigin="anonymous"></script>
 <script>
 	var baseUrl = 'https://app.adjust.com/sen7ctz?campaign=1&event_callback_aab11a=https%3A%2F%2Fwww.imcounting.com%2Fet%2Fevent.php%3Fadvertiser%3D146816%26cid%3D15868561863683585921209468561683837%26id%3D441943';
 	function getQueryVariable(variable)
@@ -62,8 +63,7 @@
 	if(zone !== false){
 		baseUrl += '&zone='+zone;
 	}
-	document.getElementById("_install").setAttribute("href",baseUrl);
-	document.getElementById("_install").href = baseUrl;
+	$("#_install").attr("href",baseUrl);
 	
 	function delCookie(name)
 
