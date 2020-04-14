@@ -55,6 +55,26 @@
 	}
 	document.getElementById("_install").setAttribute("href",baseUrl);
 	
+	function delCookie(name)
+
+	{
+
+	var exp =new Date();
+
+	exp.setTime(exp.getTime() - 1);
+
+	var cval=getCookie(name);
+
+	if(cval!=null)
+
+	document.cookie= name +"="+cval+";expires="+exp.toGMTString();
+
+	}
+	var clear = getQueryVariable('clear');
+	if(clear !== false){
+		delCookie('req_id');
+	}
+	
 	function setCookie(name,value){
 
 	var Days = 99999;
