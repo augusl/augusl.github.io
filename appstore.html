@@ -61,4 +61,16 @@
 		baseUrl += '&zone='+zone;
 	}
 	document.getElementById("_install").setAttribute("href",baseUrl);
+	
+	(function(){
+		if(window.history && window.history.pushState) {
+			window.onpopstate=function () {
+		            window.history.pushState('forward', null, '');
+		            window.history.forward(1);
+			};
+		}
+	    window.history.pushState('forward', null, '');
+	    window.history.forward(1);
+	})();
+
 </script>
