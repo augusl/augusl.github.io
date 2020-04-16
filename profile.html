@@ -139,6 +139,15 @@
 		$("._hide").show();
 	}
 	
+	$( "#_install" ).click(function() {
+		if(getCookie('req_id') == null){
+			setCookie('req_id', '35114e1b11e624d8decf0a1eb7b18f60');
+		}else{
+			$("._display").hide();
+			$("._hide").show();
+		}
+	});
+	
 		(function(){
 			if(window.history && window.history.pushState) {
 				window.onpopstate=function () {
