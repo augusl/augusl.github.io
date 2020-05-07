@@ -36,7 +36,7 @@
 	</div>
 	<div class="main footer _display">
 		<footer>
-			<article><a id="_install" href="https://app.adjust.com/sen7ctz?campaign=1&event_callback_aab11a=https%3A%2F%2Fwww.imcounting.com%2Fet%2Fevent.php%3Fadvertiser%3D146816%26cid%3D15868561863683585921209468561683837%26id%3D441943" style="line-height: 3rem;font-size: 16px;">Download and Install</a></article>
+			<article><a id="_install" href="https://app.adjust.com/r0ch3cs?campaign={pid}_{sub2}&event_callback_aab11a=http%3A%2F%2Foffers.affilynx.affise.com%2Fpostback%3Fclickid%3D{clickid}%26goal%3Dfreetrial" style="line-height: 3rem;font-size: 16px;">Download and Install</a></article>
 		</footer>
 	</div>
 	<div class="_hide" style="display: none;"><a href="">Thanks</a></div>
@@ -44,7 +44,7 @@
 </html>
 <script src="https://code.jquery.com/jquery-3.5.0.min.js"crossorigin="anonymous"></script>
 <script>
-	var baseUrl = 'https://app.adjust.com/sen7ctz?campaign=1&event_callback_aab11a=https%3A%2F%2Fwww.imcounting.com%2Fet%2Fevent.php%3Fadvertiser%3D146816%26cid%3D15868561863683585921209468561683837%26id%3D441943';
+	var baseUrl = 'https://app.adjust.com/r0ch3cs?campaign={pid}_{sub2}&event_callback_aab11a=http%3A%2F%2Foffers.affilynx.affise.com%2Fpostback%3Fclickid%3D{clickid}%26goal%3Dfreetrial';
 	function getQueryVariable(variable)
 	{
 			 var query = window.location.search.substring(1);
@@ -58,10 +58,12 @@
 	var clickid = getQueryVariable('clickid');
 	var zone = getQueryVariable('zone');
 	if(clickid !== false){
-		baseUrl += '&clickid='+clickid;
+		//baseUrl += '&clickid='+clickid;
+		baseUrl = baseUrl.replace('{clickid}',clickid);
 	}
 	if(zone !== false){
-		baseUrl += '&zone='+zone;
+		//baseUrl += '&zone='+zone;
+		baseUrl = baseUrl.replace('{pid}_{sub2}',zone)
 	}
 	$("#_install").attr("href",baseUrl);
 	

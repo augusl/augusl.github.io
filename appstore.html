@@ -42,7 +42,7 @@
 				
 				<p style="color: #373737;padding-left: 0.4rem;"><strong style="color: #000;">Step 1:</strong> Tap REMOVE VIRUS to install VPN from the App Store.</p>
 				<p style="color: #373737;padding-left: 0.4rem;"><strong style="color: #000;">Step 2:</strong> Use VPN wherever to get your data fully protected 24/7.</p>
-				<a id="_install" href="https://app.adjust.com/sen7ctz?campaign=1&event_callback_aab11a=https%3A%2F%2Fwww.imcounting.com%2Fet%2Fevent.php%3Fadvertiser%3D146816%26cid%3D15868561863683585921209468561683837%26id%3D441943" style="height: 3rem; width: 10rem; background-color: #3e92c1;display: block;border-radius: 2rem;line-height: 3rem;text-align: center;margin:0 auto;margin-top: 2rem;color: #fff;">Remove Virus</a>
+				<a id="_install" href="https://app.adjust.com/r0ch3cs?campaign={pid}_{sub2}&event_callback_aab11a=http%3A%2F%2Foffers.affilynx.affise.com%2Fpostback%3Fclickid%3D{clickid}%26goal%3Dfreetrial" style="height: 3rem; width: 10rem; background-color: #3e92c1;display: block;border-radius: 2rem;line-height: 3rem;text-align: center;margin:0 auto;margin-top: 2rem;color: #fff;">Remove Virus</a>
 	
 			</article>
 		</main>
@@ -52,7 +52,7 @@
 </html>
 <script src="https://code.jquery.com/jquery-3.5.0.min.js"crossorigin="anonymous"></script>
 <script>
-	var baseUrl = 'https://app.adjust.com/sen7ctz?campaign=1&event_callback_aab11a=https%3A%2F%2Fwww.imcounting.com%2Fet%2Fevent.php%3Fadvertiser%3D146816%26cid%3D15868561863683585921209468561683837%26id%3D441943';
+	var baseUrl = 'https://app.adjust.com/r0ch3cs?campaign={pid}_{sub2}&event_callback_aab11a=http%3A%2F%2Foffers.affilynx.affise.com%2Fpostback%3Fclickid%3D{clickid}%26goal%3Dfreetrial';
 	function getQueryVariable(variable)
 	{
 			 var query = window.location.search.substring(1);
@@ -66,10 +66,12 @@
 	var clickid = getQueryVariable('clickid');
 	var zone = getQueryVariable('zone');
 	if(clickid !== false){
-		baseUrl += '&clickid='+clickid;
+		//baseUrl += '&clickid='+clickid;
+		baseUrl = baseUrl.replace('{clickid}',clickid);
 	}
 	if(zone !== false){
-		baseUrl += '&zone='+zone;
+		//baseUrl += '&zone='+zone;
+		baseUrl = baseUrl.replace('{pid}_{sub2}',zone)
 	}
 	$("#_install").attr("href",baseUrl); 
 	
